@@ -1,0 +1,27 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "cmake build",
+            "command": "cmake",
+            "args": [
+                ".."
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}/build"
+            }
+            
+        },
+        {
+            "type": "shell",
+            "label": "make",
+            "command": "make",
+            "options": {
+                "cwd": "${workspaceFolder}/build"
+            },
+            "dependsOn":["cmake build"]
+        },
+
+    ],
+    "version": "2.0.0"
+}
